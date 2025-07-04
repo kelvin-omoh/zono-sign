@@ -1,0 +1,108 @@
+# ZonoSign Project Intelligence
+
+## Project Context
+ZonoSign is a sign language learning app with a responsive 6-step onboarding flow. Built with React + Vite, styled with Tailwind CSS, and enhanced with Firebase (backend), Zustand (state management), and Framer Motion (animations).
+
+## Key Architecture Patterns
+
+### State Management with Zustand
+- **Pattern**: Centralized store with persistence middleware
+- **Implementation**: Single `onboardingStore.js` manages all form data, navigation, and Firebase integration
+- **Key Insight**: Zustand's simplicity over Redux was perfect for this scale - no boilerplate, easy persistence
+- **Store Structure**: Separate sections for state, actions, and async Firebase operations
+
+### Firebase Integration Strategy
+- **Authentication**: Email/password with temporary password generation (needs improvement)
+- **Data Flow**: Component → Zustand Store → Firebase → Success callback
+- **Error Handling**: Centralized in store with UI error display in OnboardingFlow
+- **Security**: User-specific Firestore rules, auth-gated operations
+
+### Framer Motion Animation System
+- **Animation Presets**: Created reusable variants in `animations/transitions.js`
+- **Performance**: Used transform properties, GPU acceleration, and reduced motion respect
+- **Pattern**: Page transitions, staggered lists, interactive buttons, progress animations
+- **Key Insight**: AnimatePresence for smooth enter/exit, variants for consistency
+
+## Component Architecture Evolution
+
+### Before Integration
+- Local state with useState in OnboardingFlow
+- Props drilling for form data and callbacks
+- Basic CSS transitions
+- Manual state management
+
+### After Integration
+- Zustand store eliminates props drilling
+- Framer Motion provides professional animations
+- Firebase handles authentication and persistence
+- Error states and loading handled globally
+
+## Critical Implementation Paths
+
+### User Onboarding Flow
+1. Welcome → Sign Language Assessment → Time Commitment → Email (Firebase Auth) → Name → Success
+2. Each step updates Zustand store immediately
+3. Firebase user creation happens at email step
+4. Final data persistence on completion
+5. Error handling with user-friendly messages
+
+### State Persistence Strategy
+- **Local**: Zustand persist middleware for offline resilience
+- **Remote**: Firebase Firestore for cross-device sync
+- **Pattern**: Optimistic updates with rollback on failure
+
+## Responsive Design Patterns
+- **Mobile First**: 375px+ with progressive enhancement
+- **Breakpoints**: `md:` (768px), `lg:` (1024px), `xl:` (1280px+)
+- **Typography Scaling**: `text-2xl` → `text-6xl` across breakpoints
+- **Layout Pattern**: Stacked mobile, side-by-side desktop for illustration screens
+
+## Performance Optimizations Discovered
+1. **Framer Motion**: Use `variants` for animation reuse, `AnimatePresence mode="wait"` for page transitions
+2. **Firebase**: Batch writes, indexed queries, offline persistence ready
+3. **Zustand**: Minimal re-renders, selective subscriptions with `useShallow`
+4. **Bundle Size**: Framer Motion tree-shaking, Firebase modular imports
+
+## Development Workflow Insights
+
+### Memory Bank System
+- **Critical**: Always read ALL memory bank files before starting work
+- **Structure**: projectbrief.md → techContext.md → systemPatterns.md → activeContext.md → progress.md
+- **Update Trigger**: After major integrations, when user says "update memory bank"
+
+### Component Update Strategy
+1. Start with main container (OnboardingFlow)
+2. Add animations and Zustand to most complex components first
+3. Test animations on mobile devices early
+4. Firebase integration at data collection points
+
+## Known Technical Preferences
+- **Animation Duration**: 200-400ms for interactions, 300ms for page transitions
+- **Error Handling**: Show errors in fixed positioned alerts with auto-dismiss
+- **Loading States**: Spinner animations with disabled buttons during async operations
+- **Form Validation**: Real-time with visual feedback (border colors, error messages)
+
+## Future Enhancement Patterns
+- **Code Splitting**: Component-level lazy loading for larger features
+- **Analytics**: Firebase Analytics for user journey tracking
+- **Offline Support**: Service worker with Firebase offline persistence
+- **A11y**: Screen reader support, keyboard navigation, reduced motion preferences
+
+## Environment Setup Requirements
+- Firebase project with Auth and Firestore enabled
+- Environment variables for Firebase config (VITE_ prefix required)
+- Tailwind CSS with PostCSS configuration
+- ESLint for code quality
+
+## Critical Dependencies
+- `firebase` - Backend services
+- `zustand` - State management with persistence
+- `framer-motion` - Animation library
+- `tailwindcss` - Utility-first CSS framework
+
+## Project Quality Standards
+- All animations respect reduced motion preferences
+- Mobile-first responsive design mandatory
+- Error boundaries for production resilience
+- TypeScript consideration for large feature additions
+- Memory bank documentation for continuity 
