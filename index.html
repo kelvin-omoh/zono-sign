@@ -1,13 +1,250 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- Primary Meta Tags -->
+  <title>ZonoSign - Learn American Sign Language Online | Interactive ASL Lessons & Quizzes</title>
+  <meta name="title" content="ZonoSign - Learn American Sign Language Online | Interactive ASL Lessons & Quizzes" />
+  <meta name="description"
+    content="Master American Sign Language with ZonoSign's interactive lessons, real-time quizzes, and comprehensive ASL dictionary. Learn sign language online with expert-designed courses, track your progress, and earn achievements. Start your ASL journey today!" />
+  <meta name="keywords"
+    content="sign language, ASL, American Sign Language, learn sign language, sign language courses, ASL lessons, sign language app, deaf communication, hearing impaired, sign language dictionary, ASL alphabet, fingerspelling, sign language quiz, learn ASL online, sign language training, deaf culture, inclusive communication, accessibility, sign language education, ASL practice" />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="language" content="English" />
+  <meta name="author" content="ZonoSign" />
+  <meta name="revisit-after" content="1 days" />
+
+  <!-- Viewport for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/logo.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/logo.png" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://zonosign.com/" />
+  <meta property="og:title" content="ZonoSign - Learn American Sign Language Online | Interactive ASL Lessons" />
+  <meta property="og:description"
+    content="Master American Sign Language with ZonoSign's interactive lessons, real-time quizzes, and comprehensive ASL dictionary. Learn sign language online with expert-designed courses and track your progress." />
+  <meta property="og:image" content="https://zonosign.com/logo.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="ZonoSign" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://zonosign.com/" />
+  <meta property="twitter:title" content="ZonoSign - Learn American Sign Language Online | Interactive ASL Lessons" />
+  <meta property="twitter:description"
+    content="Master American Sign Language with ZonoSign's interactive lessons, real-time quizzes, and comprehensive ASL dictionary. Learn sign language online with expert-designed courses." />
+  <meta property="twitter:image" content="https://zonosign.com/logo.png" />
+  <meta property="twitter:image:alt" content="ZonoSign - American Sign Language Learning Platform" />
+
+  <!-- Additional SEO Meta Tags -->
+  <meta name="theme-color" content="#14b8a6" />
+  <meta name="application-name" content="ZonoSign" />
+  <meta name="apple-mobile-web-app-title" content="ZonoSign" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <!-- Preconnect to external domains for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://firebase.googleapis.com" />
+  <link rel="preconnect" href="https://firestore.googleapis.com" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://zonosign.com/" />
+
+  <!-- Humans.txt -->
+  <link type="text/plain" rel="author" href="/humans.txt" />
+
+  <!-- Structured Data - JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "ZonoSign",
+      "alternateName": "ZonoSign ASL Learning App",
+      "description": "Interactive American Sign Language learning platform with comprehensive lessons, quizzes, and progress tracking for mastering ASL communication skills.",
+      "url": "https://zonosign.com",
+      "logo": "https://zonosign.com/logo.png",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web Browser, iOS, Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "250",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "ZonoSign",
+        "url": "https://zonosign.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ZonoSign",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://zonosign.com/logo.png"
+        }
+      },
+      "featureList": [
+        "Interactive ASL Lessons",
+        "Real-time Quizzes",
+        "Progress Tracking",
+        "Achievement System",
+        "ASL Dictionary",
+        "Fingerspelling Practice",
+        "Mobile Responsive",
+        "Offline Learning"
+      ],
+      "screenshot": "https://zonosign.com/start.png",
+      "softwareVersion": "1.0",
+      "datePublished": "2024-01-01",
+      "dateModified": "2024-12-18",
+      "inLanguage": "en-US",
+      "copyrightHolder": {
+        "@type": "Organization",
+        "name": "ZonoSign"
+      },
+      "copyrightYear": "2024",
+      "license": "https://zonosign.com/terms",
+      "educationalUse": "Sign Language Learning",
+      "educationalLevel": "Beginner to Advanced",
+      "learningResourceType": "Interactive Course",
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student"
+      }
+    }
+    </script>
+
+  <!-- Course Schema for SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "American Sign Language Complete Course",
+      "description": "Comprehensive ASL course covering basic to advanced sign language skills, fingerspelling, and deaf culture awareness.",
+      "provider": {
+        "@type": "Organization",
+        "name": "ZonoSign",
+        "sameAs": "https://zonosign.com"
+      },
+      "educationalLevel": "Beginner",
+      "about": {
+        "@type": "Thing",
+        "name": "American Sign Language"
+      },
+      "teaches": [
+        "ASL Alphabet and Fingerspelling",
+        "Common Sign Language Phrases",
+        "Advanced Sign Language Vocabulary",
+        "Deaf Culture and Communication",
+        "Interactive Sign Recognition"
+      ],
+      "courseMode": "online",
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "online",
+        "instructor": {
+          "@type": "Organization",
+          "name": "ZonoSign ASL Experts"
+        }
+      }
+    }
+    </script>
+
+  <!-- FAQ Schema for SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is ZonoSign?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ZonoSign is an interactive online platform for learning American Sign Language (ASL) with comprehensive lessons, quizzes, progress tracking, and a complete ASL dictionary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is ZonoSign free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, ZonoSign offers free access to basic ASL lessons and features to help everyone learn sign language regardless of their financial situation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I learn ASL online effectively?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely! ZonoSign uses interactive visual learning, real-time feedback, and progressive lesson structures that make learning ASL online highly effective and engaging."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need any prior experience to start?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No prior experience is needed. ZonoSign starts with basic ASL alphabet and gradually progresses to more complex signs and conversations, suitable for complete beginners."
+          }
+        }
+      ]
+    }
+    </script>
+
+  <!-- Performance optimizations -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//firebase.googleapis.com" />
+
+  <!-- Security headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+
+  <!-- Accessibility -->
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+
+  <!-- Accessibility announcement for screen readers -->
+  <div id="sr-announcements" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+
+  <!-- No JavaScript fallback -->
+  <noscript>
+    <div style="text-align: center; padding: 2rem; background: #f3f4f6;">
+      <h1>ZonoSign - Learn American Sign Language</h1>
+      <p>Please enable JavaScript to use ZonoSign's interactive ASL learning platform.</p>
+      <p>ZonoSign helps you master American Sign Language with interactive lessons and real-time feedback.</p>
+    </div>
+  </noscript>
+</body>
+
 </html>

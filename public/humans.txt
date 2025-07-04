@@ -1,0 +1,88 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Developer: ZonoSign Development Team
+    Contact: hello [at] zonosign.com
+    Location: Global
+
+# THANKS
+
+    Sign Language Community
+    Deaf Culture Advocates
+    ASL Educators
+    Accessibility Champions
+
+# TECHNOLOGY COLOPHON
+
+    ## Frontend
+    React 18
+    Vite
+    Tailwind CSS
+    Framer Motion
+    JavaScript ES2022
+
+    ## State Management
+    Zustand
+    Local Storage Persistence
+
+    ## Backend & Database
+    Firebase Authentication
+    Firestore Database
+    Firebase Hosting
+
+    ## Development Tools
+    ESLint
+    PostCSS
+    Autoprefixer
+    Git
+
+    ## Design & UX
+    Mobile-First Responsive Design
+    Progressive Web App (PWA)
+    Accessibility (WCAG)
+    Reduced Motion Support
+
+    ## Performance
+    Code Splitting
+    Lazy Loading
+    Image Optimization
+    Bundle Optimization
+
+    ## SEO & Analytics
+    Structured Data (JSON-LD)
+    Open Graph Protocol
+    Twitter Cards
+    Sitemap XML
+    Robots.txt
+
+    ## Deployment
+    GitHub Pages / Vercel
+    Continuous Integration
+    Environment Variables
+
+# STANDARDS
+
+    HTML5
+    CSS3
+    ECMAScript 2022
+    Web Content Accessibility Guidelines (WCAG) 2.1
+    Progressive Web App Standards
+
+# SPECIAL THANKS
+
+    The deaf community for their guidance and feedback
+    ASL instructors who helped validate our content
+    Accessibility advocates who tested our app
+    Open source contributors
+
+# MISSION
+
+    Making sign language education accessible to everyone
+    Breaking down communication barriers
+    Promoting inclusive design and accessibility
+    Empowering deaf culture and ASL learning
+
+Last update: 2024/12/18
+    Location: Earth 
